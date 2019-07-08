@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="<%=basePath%>">
 	<meta charset="UTF-8">
 	<title>登录页-澳猫团</title>
 	<link rel="shortcut icon" href="favicon.ico">
@@ -21,7 +28,7 @@
 		<!-- 搜索和logo -->
 		<div class="logoAndSearch textWarp w1190 clearfix">
 			<div class="logo">
-				<a href="list.jsp">澳猫网</a>
+				<a href="index.jsp">澳猫网</a>
 			</div>
 			<div class="LAStxt">
 				欢迎登录
@@ -53,17 +60,18 @@
 			<div class="mainContent boxS">
 				<div class="MCup clearfix">
 					<div class="MCright W310">
+						<form method="post" action="user/login">
 						<h3 class="clearfix">
 							<span>登录澳猫团</span>
 							<a target="_blank" href="register.jsp">免费注册</a>
 						</h3>
 						<p class="userName">
 							<em></em>
-							<input class="W310" placeholder="请输入您的手机号/邮箱" type="text">
+							<input class="W310" name="username" placeholder="请输入您的手机号/邮箱" type="text">
 						</p>
 						<p class="passWord">
 							<em></em>
-							<input class="W310" placeholder="请输入密码" type="password">
+							<input class="W310" name="password" placeholder="请输入密码" type="password">
 						</p>
 						<p class="clearfix yzm">
 							<input type="text" placeholder="验证码">
@@ -77,7 +85,8 @@
 							<span>记住密码</span>
 							<a target="_blank" href="#">忘记密码？</a>
 						</p>
-						<a class="loGin W310" href="#">登录</a>
+						<input class="loGin W310" type="submit" value="登录" />
+						</form>
 					</div>
 					<div class="MCleft W115">
 						<img src="images/AppEr.png" alt="二维码">
