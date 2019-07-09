@@ -23,7 +23,7 @@ public class Items implements Serializable {
 	private Integer goodsid;
 
 	/** 订单编号. */
-	private Integer orderid;
+	private String orderid;
 
 	/**
 	 * 僐儞僗僩儔僋僞.
@@ -94,7 +94,7 @@ public class Items implements Serializable {
 	 * @param orderid
 	 *            订单编号
 	 */
-	public void setOrderid(Integer orderid) {
+	public void setOrderid(String orderid) {
 		this.orderid = orderid;
 	}
 
@@ -103,7 +103,7 @@ public class Items implements Serializable {
 	 * 
 	 * @return 订单编号
 	 */
-	public Integer getOrderid() {
+	public String getOrderid() {
 		return this.orderid;
 	}
 

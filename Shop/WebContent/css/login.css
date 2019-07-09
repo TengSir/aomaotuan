@@ -45,7 +45,7 @@
 	font-weight: normal;
 	float: right;
 }
-.MCright input{
+.MCright input,.MCright select{
 	height: 36px;
 	border:1px solid #cacaca;
 	border-radius: 5px;
@@ -64,10 +64,22 @@
 	top:4px;
 	border-right: 1px solid #cacaca;
 }
+.MCright .userage,.MCright .passWord{
+	position: relative;
+}
+.MCright .userage em,.MCright .passWord em{
+	position: absolute;
+	display: block;
+	padding:0 15px;
+	height: 30px;
+	background: url(../images/user.png) center center no-repeat;
+	top:4px;
+	border-right: 1px solid #cacaca;
+}
 .MCright .passWord em{
 	background-image: url(../images/pw.png);
 }
-.MCright .userName input,.MCright .passWord input{
+.MCright .userName input,.MCright .passWord input,.MCright .userage select{
 	text-indent: 3em;
 }
 .MCright p.yzm input{

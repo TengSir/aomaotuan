@@ -10,12 +10,6 @@ import java.io.Serializable;
  */
 public class Users implements Serializable {
 
-	@Override
-	public String toString() {
-		return "Users [userid=" + userid + ", username=" + username
-				+ ", password=" + password + ", nicheng=" + nicheng + "]";
-	}
-
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
@@ -30,6 +24,15 @@ public class Users implements Serializable {
 
 	/** 昵称. */
 	private String nicheng;
+
+	/** 用户头像. */
+	private String image;
+
+	/** 用户性别. */
+	private String sex;
+
+	/** 用户年龄. */
+	private Integer age;
 
 	/**
 	 * 僐儞僗僩儔僋僞.
@@ -111,6 +114,63 @@ public class Users implements Serializable {
 	 */
 	public String getNicheng() {
 		return this.nicheng;
+	}
+
+	/**
+	 * 用户头像 傪愝掕偟傑偡.
+	 * 
+	 * @param image
+	 *            用户头像
+	 */
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	/**
+	 * 用户头像 傪庢摼偟傑偡.
+	 * 
+	 * @return 用户头像
+	 */
+	public String getImage() {
+		return this.image;
+	}
+
+	/**
+	 * 用户性别 傪愝掕偟傑偡.
+	 * 
+	 * @param sex
+	 *            用户性别
+	 */
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	/**
+	 * 用户性别 傪庢摼偟傑偡.
+	 * 
+	 * @return 用户性别
+	 */
+	public String getSex() {
+		return this.sex;
+	}
+
+	/**
+	 * 用户年龄 傪愝掕偟傑偡.
+	 * 
+	 * @param age
+	 *            用户年龄
+	 */
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	/**
+	 * 用户年龄 傪庢摼偟傑偡.
+	 * 
+	 * @return 用户年龄
+	 */
+	public Integer getAge() {
+		return this.age;
 	}
 
 	/**
